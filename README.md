@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/thegoat-ir/cli.svg?branch=main)](https://travis-ci.com/thegoat-ir/cli)
+![The Goat CLI CI](https://github.com/thegoat-ir/cli/workflows/The%20Goat%20CLI%20CI/badge.svg)
 # The Goat CLI
 The Goat CLI brings The Goat to your command line.
 
