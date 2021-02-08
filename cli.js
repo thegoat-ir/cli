@@ -18,7 +18,8 @@ Commands
         Example
         $ thegoat whois example.com
 
-    
+Further information:
+  https://github.com/thegoat-ir/cli#readme
 `);
 const command = cli.input[0];
 const input = cli.input[1];
