@@ -3,6 +3,7 @@
 
 const meow = require("meow");
 const whois = require("./whois");
+const update = require("./update");
 const cli = meow(`
 	Usage
 	  $ thegoat <command> <input> [options]
@@ -32,6 +33,10 @@ else {
     case "whois":
       if (inputLength == 2) whois.lookup(input, flags);
       else error("Missing: domain");
+      break;
+    case "update":
+      if (inputLength == 1) update.update();
+      else error("Error: unrecognized arguments");
       break;
     default:
       error("Notfound: command");
