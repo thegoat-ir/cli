@@ -13,9 +13,7 @@ const update = {
         console.log(`Error: ${stderr}`);
         return;
       }
-      if (stdout.includes("up to date"))
-        console.log("Thegoat is already up-to-date.");
-      else console.log(stdout);
+      console.log("Thegoat is updated.")
     });
   },
 };
