@@ -4,6 +4,7 @@
 const meow = require("meow");
 const whois = require("./whois");
 const update = require("./update");
+const sub = require("./sub");
 const cli = meow(`
 	Usage
 	  $ thegoat <command> <input> [options]
@@ -19,6 +20,15 @@ Commands
         Example
         $ thegoat whois example.com
 
+      sub
+        $ thegoat sub <domain> [options]
+
+        Options
+        --json, -j  print as json
+
+        Example
+        $ thegoat sub example.com  
+
 Further information:
   https://github.com/thegoat-ir/cli#readme
 `);
@@ -32,6 +42,10 @@ else {
   switch (command) {
     case "whois":
       if (inputLength == 2) whois.lookup(input, flags);
+      else error("Missing: domain");
+      break;
+    case "sub":
+      if (inputLength == 2) sub.lookup(input, flags);
       else error("Missing: domain");
       break;
     case "update":
