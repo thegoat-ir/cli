@@ -20,6 +20,15 @@ Commands
         Example
         $ thegoat whois example.com
 
+      sub
+        $ thegoat sub <domain> [options]
+
+        Options
+        --json, -j  print as json
+
+        Example
+        $ thegoat sub example.com  
+
 Further information:
   https://github.com/thegoat-ir/cli#readme
 `);
