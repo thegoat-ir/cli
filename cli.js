@@ -4,6 +4,7 @@
 const meow = require("meow");
 const whois = require("./whois");
 const update = require("./update");
+const sub = require("./sub");
 const cli = meow(`
 	Usage
 	  $ thegoat <command> <input> [options]
@@ -32,6 +33,10 @@ else {
   switch (command) {
     case "whois":
       if (inputLength == 2) whois.lookup(input, flags);
+      else error("Missing: domain");
+      break;
+    case "sub":
+      if (inputLength == 2) sub.lookup(input, flags);
       else error("Missing: domain");
       break;
     case "update":
